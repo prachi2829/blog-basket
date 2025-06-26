@@ -1,0 +1,19 @@
+<%- include('partials/header') -%>
+
+
+<form class="add" action="/add" method="post" enctype="multipart/form-data">
+    <label for="title">Title</label>
+    <input type="text" name="title" required/>
+    <label for="coverImage">Cover Image</label>
+    <input type="file" name="coverImage"/>
+    <label for="body">Body</label>
+    <textarea name="body" placeholder="Write your content here"></textarea>
+    <button>Submit</button>
+</form>
+
+
+
+
+
+
+<%- include('partials/footer') -%>

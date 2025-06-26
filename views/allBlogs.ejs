@@ -1,0 +1,25 @@
+<%- include('partials/header'); -%>
+
+<h2 style="text-align:center; margin-bottom: 60px;">All Blogs</h2>
+
+<ul class="blogs">
+  <% blogs.forEach(blog => { %>
+    <li class="blog">
+      <img src="<%= blog.coverImageURL %>" alt="blog image" />
+      <h4><%= blog.title %></h4>
+      <p><%= blog.body.length > 100 ? blog.body.substring(0, 100) + '...' : blog.body %></p>
+      <small><%= blog.createdAt.toDateString() %></small><br><br>
+      <a href="/blogs/<%= blog._id %>" class="btn">Read More</a>
+    </li>
+  <% }) %>
+</ul>
+
+<% if (hasMore) { %>
+  <div style="text-align: center; margin-top: 40px;">
+    <a href="/blogs?page=<%= currentPage + 1 %>" class="btn">View More</a>
+  </div>
+<% } else if (blogs.length === 0) { %>
+  <p style="text-align:center;">No blogs available yet.</p>
+<% } %>
+
+<%- include('partials/footer'); -%>

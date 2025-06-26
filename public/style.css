@@ -1,0 +1,344 @@
+/* google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+body{
+  margin: 20px 40px;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  background: #fafafa;
+}
+h1, h2, h3, h4, ul, li, a, p, input, label, button, div, footer{
+  margin: 0;
+  padding: 0;
+  font-family: 'Quicksand', sans-serif;
+  color: #444;
+}
+ul{
+  list-style-type: none;
+}
+a{
+  text-decoration: none;
+}
+nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 100px;
+}
+nav ul{
+  display: flex;
+  align-items: center;
+}
+nav li{
+  margin-left: 20px;
+}
+nav li a{
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.btn{
+  border-radius: 36px;
+  background: #FEE996;
+}
+form h2{
+  font-size: 2.4em;
+  font-weight: 900;
+  margin-bottom: 40px;
+}
+form{
+  width: 360px;
+  margin: 0 auto;
+  padding: 30px;
+  box-shadow: 1px 2px 3px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  background: white;
+}
+input{
+  padding: 10px 12px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+  font-size: 1em;
+  width: 94%;
+}
+label{
+  display: block;
+  margin: 20px 0 10px;
+}
+button{
+  margin-top: 30px;
+  border-radius: 36px;
+  background: #FEE996;
+  border:0;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 0.8em;
+  display: block;
+  padding: 10px 16px;
+  letter-spacing: 2px;
+}
+.error{
+  color: #ff0099;
+  margin: 10px 2px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+header{
+  display: flex;
+  align-items: center;
+}
+header img{
+  width: 550px;
+  margin-right: 40px;
+}
+header h2{
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+header h3{
+  font-size: 1.6em;
+  margin-bottom: 10px;
+  margin-left: 2px;
+  color: #999;
+}
+header .btn{
+  margin-top: 20px;
+  padding: 12px 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+  display: inline-block;
+  font-size: 0.8em;
+}
+.blogs{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 30px;
+  row-gap: 80px;
+  margin: 80PX AUTO;
+  max-width: 1200px;
+}
+.blog{
+  display: inline-block;
+  border:1px solid rgb(244, 226, 236);
+  border-radius: 20px;
+  background: white;
+  position: relative;
+  text-align: center;
+  padding: 0 20px 30px 20px
+}
+.blog img{
+  height: 100px;
+  margin: 30px auto 20px;
+}
+footer{
+  text-align: center;
+  margin-top: 120px;
+  color: #aaa;
+}
+
+
+
+.container {
+  max-width: 900px;
+  margin: 60px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.blog-image {
+  
+  height: 250px;
+  margin-bottom: 20px;
+}
+
+.blog-title {
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.blog-meta {
+  margin-bottom: 10px;
+  font-style: italic;
+  color: #777;
+}
+
+.blog-body {
+   white-space: pre-wrap;
+  word-wrap: break-word;
+  font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+hr {
+  margin: 30px 0;
+}
+
+
+
+.delete-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  box-shadow: none;
+}
+
+.delete-form * {
+  all: unset; /* Remove all inherited/default styles */
+}
+
+.delete-button {
+  background-color: #f87171;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  border: none;
+  transition: background 0.2s ease-in-out;
+}
+
+.delete-button:hover {
+  background-color: #dc2626;
+}
+
+
+/* Override for Add Blog Form */
+form.add {
+  width: 700px; /* wider form */
+  max-width: 90%;
+  padding: 40px 50px;
+  margin: 40px auto;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
+  background: white;
+  border-radius: 12px;
+}
+
+form.add input,
+form.add textarea {
+  width: 100%;
+  font-size: 1rem;
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  box-sizing: border-box;
+}
+
+form.add textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+
+
+form.add button {
+  background: #fee996;
+  padding: 12px 20px;
+  border-radius: 36px;
+  font-weight: bold;
+  font-size: 0.9em;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+form.add button:hover {
+  background: #fdd85d;
+}
+
+
+
+.blog-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+  padding: 0 10px;
+}
+
+.like-form, .like-button, .like-count, .comment-count {
+  all: unset;
+  font-size: 1rem;
+  color: #444;
+  cursor: pointer;
+}
+
+.like-button {
+  background-color: #fee996;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.like-button:hover {
+  background-color: #fcd34d;
+}
+
+.comment-section {
+  max-width: 100%;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.comment-section h3 {
+  margin-bottom: 20px;
+  font-size: 1.4rem;
+}
+
+.comment-list {
+  margin-bottom: 30px;
+  padding-left: 0;
+}
+
+.comment-list li {
+  margin-bottom: 20px;
+  background: #f9f9f9;
+  padding: 12px 16px;
+  border-radius: 8px;
+  list-style: none;
+}
+
+.comment-form textarea {
+  width: 90%;
+  padding: 10px;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  margin-bottom: 0.5px;
+}
+
+.comment-form button {
+  background-color: #fee996;
+  color: #444;
+  padding: 4px 6px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background 0.2s ease-in-out;
+}
+
+.comment-form button:hover {
+  background-color: #fcd34d;
+}
+
+
+.comment-list {
+  margin-top: 20px;
+  list-style: none;
+  padding-left: 0;
+}
+
+.comment-list li {
+  padding: 0;
+  border-bottom: 1px solid #eee;
+}

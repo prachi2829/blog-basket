@@ -1,0 +1,59 @@
+<%- include('partials/header'); -%>
+
+<div class="container">
+  <div style="text-align: center;">
+    <img src="<%= blog.coverImageURL %>" alt="Blog Image" class="blog-image" />
+    <h2 class="blog-title"><%= blog.title %></h2>
+    <p class="blog-meta">By <%= blog.createdBy?.email || 'Anonymous' %> on <%= blog.createdAt.toDateString() %></p>
+  </div>
+  <hr />
+  <div class="blog-body"><%= blog.body %></div>
+  <% if (user && user._id.toString() === blog.createdBy._id.toString()) { %>
+  <form class="delete-form" action="/blogs/<%= blog._id %>/delete" method="POST">
+    <button type="submit" class="delete-button">Delete Blog</button>
+  </form>
+<% } %>
+</div>
+
+
+<!-- Likes & Comments Summary -->
+<div class="blog-actions" style="display: flex; justify-content: center; gap: 20px; align-items: center; margin-top: 20px;">
+  <% if (user) { %>
+    <form action="/blogs/<%= blog._id %>/like" method="POST" class="like-form" style="margin: 0;">
+      <button type="submit" class="like-button">
+        ❤️ Like (<%= blog.likes.length %>)
+      </button>
+    </form>
+  <% } else { %>
+    <p class="like-count">❤️ <%= blog.likes.length %> Likes</p>
+  <% } %>
+
+  <!-- Comment Count -->
+  <div class="comment-count" style="font-size: 1rem; color: #555;">
+    💬 <%= comments.length %> Comments
+  </div>
+</div>
+
+<!-- Comments Section -->
+<div class="comment-section">
+  <h3>Comments</h3>
+  <ul class="comment-list">
+    <% comments.forEach(comment => { %>
+      <li>
+        <strong><%= comment.author.email %>:</strong>
+        <p><%= comment.content %></p>
+      </li>
+    <% }) %>
+  </ul>
+
+  <% if (user) { %>
+    <form action="/blogs/<%= blog._id %>/comments" method="POST" class="comment-form">
+      <textarea name="content" placeholder="Write a comment..." required></textarea>
+      <button type="submit">Add Comment</button>
+    </form>
+  <% } else { %>
+    <p style="margin-top: 10px; font-style: italic;">Log in to add a comment.</p>
+  <% } %>
+</div>
+
+<%- include('partials/footer'); -%>
