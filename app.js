@@ -8,7 +8,7 @@ const cookieParser=require('cookie-parser');
 const {requireAuth,checkUser}=require('./middleware/authMiddleware');
 
 const app=express();
-const PORT=process.env.PORT;
+const PORT=process.env.PORT ||3000;
 
 app.use(express.static('public'));
 app.use(express.json());
